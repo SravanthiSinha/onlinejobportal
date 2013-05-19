@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 5px;
+
+color:#000000;
+width:140px;
+padding:2px;
+text-align:left;
+font-weight:bold;
+
+}
+
+.submenu{
+margin-bottom: 0.5em;
+}
+.style1 {color: #0000FF;width: 540px;}
+.style2 {cursor: pointer; margin-bottom: 5px; color: #0000FF; width: 540px; padding: 2px; text-align: left; font-weight: bold; }
+</style>
+
+<script type="text/javascript">
+
+var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+
+if (document.getElementById){ //DynamicDrive.com change
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+		if(el.style.display != "block"){ //DynamicDrive.com change
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") //DynamicDrive.com change
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function onloadfunction(){
+if (persistmenu=="yes"){
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=get_cookie(cookiename)
+if (cookievalue!="")
+document.getElementById(cookievalue).style.display="block"
+}
+}
+
+function savemenustate(){
+var inc=1, blockid=""
+while (document.getElementById("sub"+inc)){
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
+break
+}
+inc++
+}
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
+}
+
+if (window.addEventListener)
+window.addEventListener("load", onloadfunction, false)
+else if (window.attachEvent)
+window.attachEvent("onload", onloadfunction)
+else if (document.getElementById)
+window.onload=onloadfunction
+
+if (persistmenu=="yes" && document.getElementById)
+window.onunload=savemenustate
+
+</script>
+</head>
+
+<body>
+<center><h1>Welcome to jobhunt help</h1></center>
+<B>JOBSEEKER HELP TOPICS/FAQ'S:</B>
+<!-- Keep all menus within masterdiv-->
+<div id="masterdiv">
+
+	<div class="menutitle style1" onclick="SwitchMenu('sub1')">Why  Should I Register? </div>
+	<span class="submenu" id="sub1">
+		     <ol>  Our site provides you a platform to find the perfect job.  <br />
+			   Registering wit our website enables you to :<br />
+			   <li>Access and Apply several jobs. </li>
+			   <li>Store and Access your resume online. </li>
+			   <li>Create multiple and customized Job profiles.</li></ol>
+	</span>
+
+	<div class="style2" onclick="SwitchMenu('sub2')">How can i post a resume?</div>
+	<span class="submenu" id="sub2">
+	<p>When you click on the Register now link provided in the overlay you would get a registration form which asks you to fill in all the information of yours.
+  When you are done with the registration you need to login with your email id and password.When you login you will be redirected to your own profile,
+  At your home page you will have a tab "Upload Resume".On clicking on the tab you will be redirected to a page in which you can upload a resume which
+  can be in any format (For example .doc,.pdf,.dot).
+  This is the default profile which is sent across to the employers when you apply for a particular job vacancy.Though filling up some of the details is not mandatory,
+  but is recommended.It enables you to present to recruiters a resume that is comprehensive and one that gets you headhunted.</p>
+	</span>
+
+	<div class="style2" onclick="SwitchMenu('sub3')">How can i update or edit my profile?</div>
+	<span class="submenu" id="sub3">
+		<p>Once you have logged in to your account, you are taken to the page that shows the summary of your active Profile. To edit the same, click on the ‘Edit Profile’ link given on the same page. This lets       
+ you make the necessary changes in your Profile by editing the relevant sections. It is recommended that you update your Profile regularly. This will ensure that you have greater chances of getting  
+ headhunted as an updated profile is what recruiters prefer.</p>
+	</span>
+	
+	<div class="style2" onclick="SwitchMenu('sub4')">Does it cost to post my resume or creating an account?</div>
+	<span class="submenu" id="sub4">
+	<p>No, posting a Resume with our site is absolutely free of cost. In fact, you can create as many as customized profiles to suit specific job applications free of charge.</p> 	</span>
+<div class="style2" onclick="SwitchMenu('sub5')">If i forgot the password of the account. How do i login again?</div>
+	<span class="submenu" id="sub5">
+	<p>In this case, click on the ‘Forgot Password’ link given bottom of  the Login Page. In order to retrieve your account password, you need to enter your e-mail address specified in your resume. Once, 
+ you have entered a password will be sent directly to your inbox.</p> 	</span>
+ 
+ <div class="style2" onclick="SwitchMenu('sub6')">How can i change the password of the account?
+</div>
+	<span class="submenu" id="sub6">
+	<p>Once you have logged in to your account, you are taken to the page that shows a brief summary of your account. To change your account password, click on the ‘Change Password’ link given   
+ towards the right of the page. You would need to enter your old password and specify and confirm the new one. Once you specified and confirmed the new password, a confirmation mail will be sent
+ directly to your inbox.</p> 	</span>
+ <div class="style2" onclick="SwitchMenu('sub7')">How can i update my contact details?
+</div>
+	<span class="submenu" id="sub7">
+	<p>Once you have logged in to your account, you are taken to the page that shows a brief summary of your account. To update your general information, click on ‘Edit General info’ given in the side bar 
+ of your Active Profile. Once you have specified a new one, click on ‘Save’. This will ensure that your profile now reflects the new details that you have specified. Similarly, to update your Educational  
+ or Professional information, click on ‘Edit’ given in the sliding sidebar. After entering a new one, click on ‘save’. This will ensure that your profile now reflects the new information.</p> 	</span>
+ <div class="style2" onclick="SwitchMenu('sub8')">Who all have the access to my resume?
+</div>
+	<span class="submenu" id="sub8">
+	<p>Once you have posted your Resume, all the employers who are registered with our website can access it.You will have a great opportunity to get your resume selected by the recruiters.
+</p> 	</span>
+ <div class="style2" onclick="SwitchMenu('sub9')">What is search?
+</div>
+	<span class="submenu" id="sub9">
+	<p>Search gives you an option to look for relevant jobs based on your specific requirements. To search for a job, you can use the given search window. You may use the following criteria to look for  
+    relevant jobs.
+
+
+Keywords
+For a keyword search you may enter Designation, Key Skills, or company name of desired job. Keyword search is of the following types
+
+All words Jobs matching all the keywords entered will be returned. The keywords may or may not appear together. For example: "Sales Manager" search will result in jobs which include both words "Sales" and "Manager". Jobs with only "Sales" or only "Manager" will not be returned.
+
+Any word Jobs matching at least one of the keywords entered will be returned. For Example: "Sales Manager" search will result in jobs which include either "Sales" or "Manager" or both. 
+
+Exact phrase Matching jobs will have the keywords appear together (like a phrase) and in the same order entered. For example: "Sales Manager" will not reflect jobs with "Sales or BD Manager".
+
+
+Locations
+You may enter Indian cities or international countries, depending upon your preference. The search result will display only those jobs which are based out of the locations that you have specified.
+
+Company
+You may enter the name of the company you want to work for. The search result will display all those jobs within the company that  you have specified. 
+
+Functional Area
+This will help you find jobs matching your desired job function. This may not be required if you have already entered designation as a keyword. 
+</p> 	</span>
+<div class="style2" onclick="SwitchMenu('sub10')">How do i search for relevant jobs?
+</div>
+	<span class="submenu" id="sub10">
+	<p>Search gives you an option to look for relevant jobs based on your specific requirements. To search for a job, you can use the given search window. It is recommended that you specify the 
+ keywords, preferred locations and your total experience criteria to access job search results which are closest to what you are looking for. In case, you get results running into hundreds, you can  
+ narrow down your search by specifying all available criteria. In case of ‘No Results Found’, it is recommended that you may broaden your search by entering only a limited number of criteria. 
+</p> 	</span>
+<div class="style2" onclick="SwitchMenu('sub11')">How can i apply for a job?
+
+</div>
+<span class="submenu" id="sub11">
+	<p>Once you have selected the job/s that you want to apply for:
+
+ By clicking on the apply button you can apply for one job at a time. This option enables you to view the complete job specifications before applying. 
+</p> 	</span>
+<div class="style2" onclick="SwitchMenu('sub12')">I am not registered with your site. Can i still apply?
+
+
+</div>
+<span class="submenu" id="sub12">
+	<p>No you cannot apply for the job without registering with our site.But you can view the job vacancies which are posted by our employers on the site.
+</p> 	</span>
+<div class="style2" onclick="SwitchMenu('sub13')">Do i have an option to reapply for the same vacancy?
+
+</div>
+<span class="submenu" id="sub13">
+	<p>Yes, you can apply for the same job again after a small period of your job rejection or even after your resume update.But you can apply for the same job again and again!
+</p> 	</span>
+<div class="style2" onclick="SwitchMenu('sub14')">How do i know whether i have successfully applied for the job?
+
+</div>
+<span class="submenu" id="sub14">
+	<p>In case of a successful job application, you will be informed of the same through the confirmation mail sent by us directly to your inbox.
+</p> 	</span>
+<div class="style2" onclick="SwitchMenu('sub15')">When can i expect a response after a successful submission?
+</div>
+<span class="submenu" id="sub15">
+	<p>Once you have successfully applied for a particular job vacancy, any future correspondence towards the same lies solely at the discretion of the company.
+</p> 	</span>
+		
+	
+
+</div>
+<b>EMPLOYER HELP TOPICS/FAQ'S</b>
+<div id="masterdiv">
+
+	<div class="menutitle style1" onclick="SwitchMenu('sub16')">Why  Should I Register? </div>
+	<span class="submenu" id="sub16">
+		     <ol>  Our site provides you a platform to post job vacancies  <br />
+			   Registering with our website enables you to :<br />
+			   <li>Access and Apply several resumes. </li>
+			   <li>Store and Access your vacancies online. </li>
+			   <li>Create multiple and customized  profiles.</li></ol>
+	</span>
+	<div class="menutitle style1" onclick="SwitchMenu('sub17')">How can i post a job vacancy? </div>
+	<span class="submenu" id="sub17">
+		<p>When you click on the Register now link provided in the overlay you would get a registration form which asks you to fill in all the information of yours.
+  When you are done with the registration you need to login with your email id and password.When you login you will be redirected to your own profile,
+  At your home page you will have a tab "Post Vacancy".On clicking on the tab you will be redirected to a page in which you need to fill up the requirements to post the vacancy.
+  This is the vacancy which is visible to the jobseekers when you post a job vacancy.Though filling up some of the details is not mandatory,
+  but is recommended.</p>    
+	</span>
+	<div class="menutitle style1" onclick="SwitchMenu('sub18')">How can i update or edit my profile?
+ </div>
+	<span class="submenu" id="sub18">
+		Once you have logged in to your account, you are taken to the page that shows the summary of your active Profile. To edit the same, click on the ‘Edit Profile’ link given on the same page. This lets       
+ you make the necessary changes in your Profile by editing the relevant sections. It is recommended that you update your Profile regularly. This will ensure that you have greater chances of recruiting as many as job seekers required for your company.
+    
+	</span>
+	<div class="menutitle style1" onclick="SwitchMenu('sub19')">Does it cost to post my vacancy or creating an account?
+
+ </div>
+	<span class="submenu" id="sub19">
+		No, posting a job vacancy with our site is absolutely free of cost. 
+	</span>
+	<div class="menutitle style1" onclick="SwitchMenu('sub20')">If i forgot the password of the account. How do i login again?
+
+ </div>
+	<span class="submenu" id="sub20">
+		In this case, click on the ‘Forgot Password’ link given bottom of the Login Page. In order to retrieve your account password, you need to enter your e-mail address specified in your resume. Once, 
+ you have entered a password will be sent directly to your inbox. 
+	</span>
+	<div class="menutitle style1" onclick="SwitchMenu('sub21')">How can i change the password of the account?
+ </div>
+	<span class="submenu" id="sub21">
+		Once you have logged in to your account, you are taken to the page that shows a brief summary of your account. To change your account password, click on the ‘Change Password’ link given   
+ towards the right of the page. You would need to enter your old password and specify and confirm the new one. Once you specified and confirmed the new password, a confirmation mail will be sent
+ directly to your inbox.
+	</span>
+	<div class="menutitle style1" onclick="SwitchMenu('sub22')">How can i update my contact details?
+
+ </div>
+	<span class="submenu" id="sub22">
+		Once you have logged in to your account, you are taken to the page that shows a brief summary of your account. To update your general information, click on ‘Edit General info’ given in the side bar 
+ of your Active Profile. Once you have specified a new one, click on ‘Save’. This will ensure that your profile now reflects the new details that you have specified. Similarly, to update your Educational  
+ or Professional information, click on ‘Edit’ given in the sliding sidebar. After entering a new one, click on ‘save’. This will ensure that your profile now reflects the new information.
+ 
+	</span>
+	</div>
+</body>
+</html>

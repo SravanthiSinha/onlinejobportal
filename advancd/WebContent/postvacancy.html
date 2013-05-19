@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Onlinejobportal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+
+<script type="text/javascript" src="js/radius.js"></script>
+<script type="text/javascript" src="empfo.js"></script>
+
+<!-- CuFon ends -->
+<style type="text/css">
+<!--
+.style3 {font-size: 36px}
+.style4 {font-size: 18px}
+-->
+</style>
+</head>
+<body>
+<div class="main">
+
+  <div class="header">
+    <div class="header_resize">
+      <div class="menu_nav">
+        
+      </div>
+      <div class="logo">
+
+        <h1><a href="index.html"><span>JobHunt</span> <small>Experience the ultimate jobs</small></a></h1>
+      </div>
+      <div class="clr"></div>
+      <img src="images/mainpic1.jpg" width="970" height="170" alt="image" class="mainpic1" />
+      <div class="clr"></div>
+    </div>
+  </div>
+</div>
+  <div class="content">
+    <div class="content_resize">
+      <div class="mainbar">
+        
+
+        
+      
+     <form action="http://localhost:8080/advancd/posting.jsp" method="get">
+        <div  >
+          <h2 align="left" class="star">&nbsp;</h2>
+          <span class="style3">POST VACANCY:          </span>
+          <table width="900" align="center" bordercolordark="#6633FF" frame="box" ><!--DWLayoutTable-->
+		  <tbody>
+
+		<tr> 
+			<td colspan="2" valign="top" class="style4" style="border-top: 0px none;">Job Details:</td>
+		</tr>
+		<tr class="r2"> 
+			
+<td> <strong> Job Designation:&nbsp;</strong></td>
+			<td    valign="top" width="60">
+			  <p>
+			    <input  type="text" class="hintanchor" onclick="showhint('Express your core professional competency; e.g., Software Developer, Doctor, Editor, Nurse, etc.', this, event, '280px')" name="designation" size="42">
+		      </p>
+			  
+		 		<div >e.g. Java Developer, Receptionist, System Administrator, Nurse, Webmaster, HR Manager</div>		  </td>
+		</tr>
+		<tr class="h2"> 
+			
+<td>  <strong> Job Description:<strong></strong></td>
+			<td  class="formline-right" valign="top">
+				<p>
+				  <textarea rows="5" cols="50" name="description" id="tunnel_description2" class="txtfield" maxlength="10000"></textarea>
+			    </p>
+				<p><span class="hint">Provide details of nature of job in terms of what the candidate will be expected to do and general work conditions.<span class="hint-pointer">&nbsp;</span><span class="prop"></span></span> </p>
+				<p>&nbsp;</p></td>
+		</tr>
+		<tr>
+		            
+		             
+		                  <td width="26%"><strong>Category:</strong></td>
+			
+                <td><select name="jbc" size="4" id="id_jobCategory" multiple="multiple" ">
+                 
+                  <option value="Admin/Secretarial">Admin/Secretarial</option>
+                  <option value="Customer Service/ Call Centre/ BPO">Customer Service/ Call Centre/ BPO</option>
+                  <option value="Finance & Accounts">Finance &amp; Accounts</option>
+                  <option value="Human Resources">Human Resources</option>
+                  <option value="IT">IT</option>
+                  <option value="Legal">Legal</option>
+                  <option value="Marketing &Communications">Marketing &amp; Communications</option>
+                  <option value="Purchase/ Logistics/ Supply Chain">Purchase/ Logistics/ Supply Chain</option>
+                  <option value="Sales/ Business Development">Sales/ Business Development</option>
+                </select></td>
+		      </tr>
+				    <tr>
+		           
+		             
+		                  <td width="26%"><strong>Industry:</strong></td>
+			  
+		              
+		                  <td><select name="ind" size="4" id="ind" multiple="multiple">
+		                  
+		                  <option value="Automotive/ Ancillaries">Automotive/ Ancillaries</option>
+		                  <option value="Banking/ Financial Services">Banking/ Financial Services</option>
+		                  <option value="Bio Technology & Life Sciences">Bio Technology &amp; Life Sciences</option>
+		                  <option value="Chemicals/ Plastic/ Rubber">Chemicals/ Plastic/ Rubber</option>
+		                  <option value="Construction">Construction</option>
+		                  <option value="Consumer Goods/ FMCG">Consumer Goods/ FMCG</option>
+		                  <option value="Education">Education</option>
+		                  <option value="Entertainment/ Media/ Publishing">Entertainment/ Media/ Publishing</option>
+		                  <option value="Insurance">Insurance</option>
+		                  <option value="ITES/ BPO/ KPO">ITES/ BPO/ KPO</option>
+		                  <option value="IT/ Computers - Hardware">IT/ Computers - Hardware</option>
+		                  <option value="IT/ Computers - Software">IT/ Computers - Software</option>
+		                  <option value="Machinery/ Equipment Mfg.">Machinery/ Equipment Mfg.</option>
+		                  <option value="Oil/ Gas/ Petroleum">Oil/ Gas/ Petroleum</option>
+		                  <option value="Pharmaceuticals">Pharmaceuticals</option>
+		                  <option value="Power">Power</option>
+		                  <option value="Real Estate">Real Estate</option>
+		                  <option value="Retailing">Retailing</option>
+		                  <option value="Telecom">Telecom</option>
+		                  <option value="Advertising">Advertising</option>
+		                  <option value="Agriculture/ Dairy Based">Agriculture/ Dairy Based</option>
+		                  <option value="Airlines">Airlines</option>
+		                  <option value="Beauty/Fitness/PersonalCare/SPA">Beauty/Fitness/PersonalCare/SPA</option>
+		                  <option value="Beverages/ Liquor">Beverages/ Liquor</option>
+		                  <option value="Cement">Cement</option>
+		                  <option value="Consultancy">Consultancy</option>
+		                  <option value="Courier/ Freight/ Transportation">Courier/ Freight/ Transportation</option>
+		                  <option value="Dotcom">Dotcom</option>
+		                  <option value="Fertilizer/ Pesticides">Fertilizer/ Pesticides</option>
+		                  <option value="Food & Packaged Food">Food &amp; Packaged Food</option>
+		                  <option value="Textiles / Yarn / Fabrics / Garments">Textiles / Yarn / Fabrics / Garments</option>
+		                  <option value="Gems & Jewellery">Gems &amp; Jewellery</option>
+		                  <option value="Government/ PSU/ Defence">Government/ PSU/ Defence</option>
+		                  <option value="Home Appliances (TV, Fridge, AC etc.)">Home Appliances (TV, Fridge, AC etc.)</option>
+		                  <option value="Hospitals/ Health Care">Hospitals/ Health Care</option>
+		                  <option value="Hotels/ Restaurant">Hotels/ Restaurant</option>
+		                  <option value="Import / Export">Import / Export</option>
+		                  <option value="Iron/ Steel">Iron/ Steel</option>
+		                  <option value="ISP">ISP</option>
+		                  <option value="Leather">Leather</option>
+		                  <option value="Market Research">Market Research</option>
+		                  <option value="Medical Transcription">Medical Transcription</option>
+		                  <option value="Mining">Mining</option>
+		                  <option value="NGO">NGO</option>
+		                  <option value="Non-Ferrous Metals (Aluminium, Zinc etc.)">Non-Ferrous Metals (Aluminium, Zinc etc.)</option>
+		                  <option value="Office Equipment">Office Equipment</option>
+		                  <option value="Paints">Paints</option>
+		                  <option value="Paper">Paper</option>
+		                  <option value="Printing/ Packaging">Printing/ Packaging</option>
+		                  <option value="Public Relations (PR)">Public Relations (PR)</option>
+		                  <option value="Shipping">Shipping</option>
+		                  <option value="Sugar">Sugar</option>
+		                  <option value="Travel/ Tourism">Travel/ Tourism</option>
+		                  <option value="Tyres">Tyres</option>
+		                  <option value="Wood">Wood</option>
+		                  <option value="Other">Other</option>
+		                  </select>
+		                  </td>
+				    </tr>
+		<tr class="h3"> 
+			<td valign="top" class="formline" style="padding-right: 0px;"><strong>Job Location:</strong></td>
+			<td  class="formline-right" valign="top"> 
+				<select name="tunnel_job_location"  id="country" class="txtfield">
+				<option value="VOID">Select</option>
+
+								<option value="IN" selected="selected">India</option>
+				 
+								<option value="other_country">Another country</option>
+				</select>
+ 
+<span class="hint" id="h3">Choose your preferred job location.<span class="hint-pointer">&nbsp;</span><span class="prop"></span></span></td>
+		</tr>
+
+		<tr class="r4"> 
+			<td></td>
+			<td   valign="top"  > 
+				<p ><span class="hintanchor"  onclick="showhint('Choose your prefered job location', this, event, '200px')">
+				  <select size="3" multiple="multiple" name="loc" onkeypress="return handleEnter(this, event)" >
+				   <option value="Ahmedabad">Ahmedabad</option>
+              <option value="Bangalore">Bangalore</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Gurgaon">Gurgaon</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Noida">Noida</option>
+              <option value="Pune">Pune</option>
+              <option value="Agartala">Agartala</option>
+              <option value="Agra">Agra</option>
+              <option value="Ajmer">Ajmer</option>
+              <option value="Allahabad">Allahabad</option>
+              <option value="Amritsar">Amritsar</option>
+              <option value="Aurangabad">Aurangabad</option>
+              <option value="Baroda">Baroda</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Bhubaneshwar">Bhubaneshwar</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Cochin / Kochi / Ernakulam">Cochin / Kochi / Ernakulam</option>
+              <option value="Coimbatore">Coimbatore</option>
+              <option value="Cuttack">Cuttack</option>
+              <option value="Dehradun">Dehradun</option>
+              <option value="Dhanbad">Dhanbad</option>
+              <option value="Faizabad">Faizabad</option>
+              <option value="Gandhinagar">Gandhinagar</option>
+              <option value="Gangtok">Gangtok</option>
+              <option value="Ghaziabad">Ghaziabad</option>
+              <option value="Goa">Goa</option>
+              <option value="Guwahati">Guwahati</option>
+              <option value="Gwalior">Gwalior</option>
+              <option value="Hubli">Hubli</option>
+              <option value="Indore">Indore</option>
+              
+              <option value="Jabalpur">Jabalpur</option>
+              <option value="Jaipur">Jaipur</option>
+              
+              
+              <option value="Jammu">Jammu</option>
+           
+              <option value="Jamshedpur">Jamshedpur</option>
+           
+              <option value="Kanpur">Kanpur</option>
+              
+              <option value="86">Kharagpur</option>
+              
+              <option value="Kozhikode / Calicut">Kozhikode / Calicut</option>
+            
+              <option value="Kurukshetra">Kurukshetra</option>
+              <option value="Lucknow">Lucknow</option>
+              <option value="Ludhina">Ludhiana</option>
+              <option value="Madhurai">Madurai</option>
+              
+              <option value="Mangalore">Mangalore</option>
+           
+              <option value="Meerut">Meerut</option>
+              <option value="Mohali">Mohali</option>
+              
+              <option value="Mysore">Mysore</option>
+             
+              <option value="Nagpur">Nagpur</option>
+              <option value="Nasik">Nasik</option>
+              
+              <option value="Ooty">Ooty</option>
+             
+              <option value="Patna">Patna</option>
+              <option value="Pondicherry">Pondicherry</option>
+              
+              <option value="Port Blair">Port Blair</option>
+              
+              <option value="Raipur">Raipur</option>
+              
+              <option value="Ranchi">Ranchi</option>
+              
+              <option value="Roorkee">Roorkee</option>
+              <option value="Rourkela">Rourkela</option>
+              
+              <option value="Shillong">Shillong</option>
+              <option value="Shimla">Shimla</option>
+              
+              <option value="Sholapur">Sholapur</option>
+              <option value="Silchar">Silchar</option>
+             
+              <option value="Srinagar">Srinagar</option>
+              <option value="Surat">Surat</option>
+              <option value="Thanjavur">Thanjavur</option>
+              
+              <option value="Thiruvananthapuram / Trivandrum">Thiruvananthapuram / Trivandrum</option>
+              
+              <option value="Tirupati">Tirupati</option>
+              <option value="Trichy">Trichy</option>
+              <option value="Tuticorin">Tuticorin</option>
+              
+              <option value="Varanasi">Varanasi</option>
+              <option value="Vellore">Vellore</option>
+              <option value="Vijayawada">Vijayawada</option>
+				</select></span>			  </p>		<div></div>  </td>
+		</tr>
+			<tr> 
+			<td ><strong>Employment Type:</strong></td>
+			<td colspan="2" valign="top" height="53"> 
+				<table  border="0" cellpadding="2" cellspacing="0" width="385">
+
+					<tbody><tr> 
+						<td  valign="top"> 
+							<input name="tunnel_employment_type[]" value="full_time" id="full_1" type="radio"></td>
+							<td width="30%"><label for="full_1">Full Time</label>						</td>
+						<td> 
+							<input name="tunnel_employment_type[]" value="part_time" id="part_time_1" type="radio"></td>
+							<td width="30%"><label for="part_time_1">Part Time</label>						</td></tr>
+<tr> 
+						<td> 
+						<input name="tunnel_employment_type[]" value="contract" id="contract_1" type="radio"></td>
+						<td width="30%"><label for="contract_1">Contract/Freelance</label></td>
+					</tr>
+				</tbody></table>							</td>
+		</tr><tr> 
+			<td  valign="top"><strong>Relevant Professional Experience that matches the desired job:</strong></td>
+			<td   valign="top"> 
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tbody><tr><td colspan="4"></td></tr><tr></tr><tr>
+						<td>
+							<select name="workexpyr">
+							<option value="VOID">00</option>	
+														<option value="1">
+
+							1							</option>
+														<option value="2">
+							2							</option>
+														<option value="3">
+							3							</option>
+														<option value="4">
+							4							</option>
+
+														<option value="5">
+							5							</option>
+														<option value="6">
+							6							</option>
+														<option value="7">
+							7							</option>
+														<option value="8">
+
+							8							</option>
+														<option value="9">
+							9							</option>
+														<option value="10">
+							10							</option>
+														<option value="11">
+							11							</option>
+
+														<option value="12">
+							12							</option>
+														<option value="13">
+							13							</option>
+														<option value="14">
+							14							</option>
+														<option value="15">
+
+							15							</option>
+														<option value="16">
+							16							</option>
+														<option value="17">
+							17							</option>
+														<option value="18">
+							18							</option>
+
+														<option value="19">
+							19							</option>
+														<option value="20">
+							20							</option>
+														<option value="21">
+							21							</option>
+														<option value="22">
+
+							22							</option>
+														<option value="23">
+							23							</option>
+														<option value="24">
+							24							</option>
+														<option value="25">
+							25							</option>
+
+														<option value="26">
+							26							</option>
+														<option value="27">
+							27							</option>
+														<option value="28">
+							28							</option>
+														<option value="29">
+
+							29							</option>
+														<option value="30">
+							30							</option>
+														<option value="31">
+							31							</option>
+														<option value="32">
+							32							</option>
+
+														<option value="33">
+							33							</option>
+														<option value="34">
+							34							</option>
+														<option value="35">
+							35							</option>
+														<option value="36">
+
+							36							</option>
+														<option value="37">
+							37							</option>
+														<option value="38">
+							38							</option>
+														<option value="39">
+							39							</option>
+
+														<option value="40">
+							40							</option>
+							</select>
+							Years &nbsp;&nbsp;&nbsp;&nbsp;						</td> 
+						<td>
+							<select name="workexpmnth">
+							<option value="VOID">00</option>										
+							<option value="1">1</option>
+
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							</select>
+							Months						</td>
+
+					</tr>
+				</tbody></table></td>
+		</tr>
+				<tr>
+			<td  valign="top"><strong>Type of Salary expected:</strong></td>
+
+			<td  valign="top"> 
+				<p><span class="hintanchor" onclick="showhint('Select the type of salary structure that you are seeking; e.g., fixed monthly package, commission basis, hourly remuneration, etc.', this, event, '200px')">
+				  <select name="salary_type" >
+				    <option value="VOID">Select</option> 
+				    <option value="fixed">Fixed salary</option>
+				    <option value="salary_incentives">Salary plus incentives</option>
+				    <option value="commission">On commission basis</option>
+				    <option value="hourly_wages">Factory wages</option>
+				    
+				    <option value="working_hours">According to hours worked</option>
+				    <option value="compensation">Compensation of expenses</option>
+				    <option value="nopayment">No payment</option>
+			      </select></span>			  </p>				</td>
+		</tr>
+		 
+	 
+		<tr> 
+			<td colspan="3" valign="top" class="headline-tunnel-colors formline1"><strong>Job Requirements:</strong></td>
+		</tr>
+			<tr> 
+			<td valign="top" class="formline"><strong>Minimum Educational Qualifications required:</strong></td>
+			<td class="formline-right" valign="top"> 
+				<table ="0" cellpadding="2" cellspacing="0" width="385">
+									<tbody><tr> 
+						<td > 
+						<input name="qualification" value="10" id="10_1" type="radio" onkeypress="return handleEnter(this, event)" >						</td>
+						<td width="50%"><label for="10_1">Standard X</label></td>
+
+                       <td> 
+						<input name="qualification" value="12" id="12_1" type="radio" onkeypress="return handleEnter(this, event)">						</td>
+						<td><label for="12_1">Standard XII</label></td>
+					</tr>
+										<tr> 
+						<td class="leftpadzero"> 
+						<input name="qualification" value="Diploma" id="Diploma_1" type="radio" onkeypress="return handleEnter(this, event)">						</td>
+						<td width="50%"><label for="Diploma_1">Diploma</label></td>
+
+						
+						<td> 
+						<input name="qualification" value="Bachelors" id="Bachelors_1" type="radio" onkeypress="return handleEnter(this, event)" >						</td>
+						<td><label for="Bachelors_1">Bachelor's degree</label></td>
+					</tr>
+					<tr> 
+						<td> 
+						<input name="qualification" value="Masters" id="Masters_1" type="radio" onkeypress="return handleEnter(this, event)">						</td>
+						<td><label for="Masters_1">Master's Degree</label></td>
+
+						<td> 
+						<input name="qualification" value="Doctorate" id="Doctorate_1" type="radio" onkeypress="return handleEnter(this, event)">						</td>
+						<td><label for="Doctorate_1">Doctorate (Ph.D.)</label></td>
+					</tr><tr>
+						<td class="leftpadzero"> 
+						<input name="qualification" value="any" id="any_1" type="radio">						</td>
+						<td><label for="any_1">Any Qualification</label></td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						</tr>
+				</table>			</td>
+		</tr>
+			
+				
+
+	  	
+			
+		<tr> 
+			<td valign="top" class="formline"><strong>Additional Information:</strong></td>
+			<td class="formline-right" valign="top"> 
+			  <p>
+			    <textarea name="info" class="txtfield" rows="7" cols="60" maxlength="10000"></textarea>
+			    </p>
+			  <p><span class="hint">If there is any additional information that may be relevant to your search, please elaborate here.<span class="hint-pointer">&nbsp;</span><span class="prop"></span></span> </p></td>
+		</tr>
+
+				<tr> 
+			<td colspan="3" class="formline" valign="top">				  </td>
+		</tr>
+			<tr> 
+			
+			<td colspan="2"  align="center"><input name="submit" type="submit"  value="submit"  /></td>
+			  </tr>
+</table>
+        </div>
+			
+	  
+    
+	</form>
+  </div>
+        
+       
+
+        
+        <p class="pages"><small>&nbsp;&nbsp;</small></p>
+
+     
+		
+		  <div class="clr"></div>
+		   <div class="clr"></div>
+       
+   </div></div>
+   <div class="fbg">
+    <div class="fbg_resize">
+
+      <div >
+        <h3 >Companies</h3>
+        <a href="#"><img src="images/ibm.gif" width="90" height="50" alt="pix" /></a>
+        <a href="#"><img src="images/microsoft.jpg" width="90" height="50" alt="pix" /></a>
+		<a href="#"><img src="images/accenture.gif" width="90" height="50" alt="pix" /></a>
+		<a href="#"><img src="images/dell.gif" width="90" height="50" alt="pix" /></a>
+       <spacer>
+       <h5>And a Lot more ..... </h5>
+       </spacer>      </div>
+      
+        
+
+      <div class="clr"></div>
+    </div>
+</div>
+  <div class="footer">
+    <div class="footer_resize" align="right" style="font:lighter">
+     <h5> <span>Designed by Pascaline Coderz</span></h5>
+
+      <div class="clr"></div>
+    </div>
+  </div>
+
+</body>
+</html>
